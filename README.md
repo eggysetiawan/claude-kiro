@@ -36,20 +36,23 @@ subagent (a *fork*), and only brings back a condensed pass/fail + diff report
 
 ## Install
 
-Skills live under a `.claude/skills/` directory, either per-project or
-globally for your user.
+Skills live under a `.claude/skills/` directory, either globally for your
+user or per-project.
 
-**Project-scoped** (only active in one repo):
+**Quick install (global, no npm publish needed):**
 ```bash
-git clone https://github.com/eggysetiawan/claude-kiro.git /tmp/claude-kiro
-mkdir -p /path/to/your-project/.claude/skills
-cp -r /tmp/claude-kiro/kiro-handoff /path/to/your-project/.claude/skills/kiro-handoff
+npx github:eggysetiawan/claude-kiro
 ```
 
-**Global** (active in every project):
+**Project-scoped** (only active in the current repo — run from the project root):
+```bash
+npx github:eggysetiawan/claude-kiro --project
+```
+
+**Manual (no npx):**
 ```bash
 git clone https://github.com/eggysetiawan/claude-kiro.git /tmp/claude-kiro
-mkdir -p ~/.claude/skills
+mkdir -p ~/.claude/skills                       # or /path/to/project/.claude/skills
 cp -r /tmp/claude-kiro/kiro-handoff ~/.claude/skills/kiro-handoff
 ```
 

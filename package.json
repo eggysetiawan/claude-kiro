@@ -1,0 +1,9 @@
+{
+  "name": "claude-kiro",
+  "version": "1.0.0",
+  "description": "Installer for the kiro-handoff Claude Code skill",
+  "bin": {
+    "claude-kiro": "bin/install.js"
+  },
+  "license": "MIT"
+}
